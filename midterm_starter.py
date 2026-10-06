@@ -37,25 +37,36 @@ def flawed_benchmark():
 
     input_sizes = [10, 50, 100, 500, 1000, 5000, 10000, 20000, 30000, 40000]
     n = 1000
-
+    results = []
 
     for size in input_sizes:
         test_cases = [random.randint(1, n) for _ in range(size)]
-        for i in range(5):
+        for i in range(10):
             start_time = time.time()
             #data1 = [random.randint(i, 10000) for i in range(n)]
             find_duplicates_slow(test_cases)
             end_time = time.time()
             print(f"Slow algorithm took: {end_time - start_time} seconds")
 
+            results.append({
+                'size': size,
+                'Time': end_time - start_time,
+                'Algorithm': 'slow'})
+
     
-        for j in range(5):
+        for j in range(10):
             start_time_2 = time.time()
             #data2 = [random.randint(i, 10000) for i in range(n)]
             find_duplicates_fast(test_cases)
             end_time_2 = time.time()
             print(f"Fast algorithm took: {end_time_2 - start_time_2} seconds")
 
+            results.append({
+                'size': size,
+                'Time': end_time_2 - start_time_2,
+                'Algorithm': 'fast'})
+
+    return results
 
 if __name__ == "__main__":
     flawed_benchmark()

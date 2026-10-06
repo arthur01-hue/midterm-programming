@@ -17,9 +17,10 @@ The file also contains a `flawed_benchmark()` function. The developer who wrote 
 **list your methodological errors and fixes here:**
 
 *I increased the amount of times the tests are ran from 1 to 5.*
-*I increased the number of input tested.*
+*I increased the number of inputs tested.*
 
 2. Run the empirical comparion and plot the results using a plotting library of your choice (e.g., `matplotlib`, `seaborn`, etc.). Include the plot in your submission called `results.png`. Be sure to label your axes and include a legend.
 
+**Done**
 
 
