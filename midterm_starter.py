@@ -33,7 +33,7 @@ def flawed_benchmark():
     This benchmarking function contains several methodological errors.
     Rewrite this function to properly and fairly compare the two algorithms to demonstrate their scaling behavior.
     """
-    print("Running flawed benchmark...")
+    print("Running benchmark...")
 
     input_sizes = [10, 50, 100, 500, 1000, 5000, 10000, 20000, 30000, 40000]
     n = 1000
